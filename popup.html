@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Summarizer</title>
+ 
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			width: 200px;
+		}
+
+		button {
+			padding: 10px 20px;
+			background-color: #007bff;
+			border: none;
+			border-radius: 5px;
+			color: #ffffff;
+			cursor: pointer;
+			font-size: 1rem;
+		}
+
+		button:hover {
+			background-color: #0056b3;
+		}
+
+		#loading {
+			color: #555;
+		}
+
+		#summary, #answer {
+			width: 100%;
+			border: 1px solid #ddd;
+			padding: 10px;
+			border-radius: 5px;
+			min-height: 50px;
+		}
+
+		#reliability {
+			color: #333;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		#summary, #answer {
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin: 10px 0;
+			min-height: 50px;
+			overflow: auto;
+			resize: vertical; /* Allows the user to resize the div vertically */
+		}
+	</style>
+</head>
+<body>
+  <button id="summarize">Summarize</button>
+  <div id="loading" style="display:none;">Loading...</div>
+  <div id="summary"></div>
+  <div id="reliability"></div>
+  <input type="text" id="question" placeholder="Ask a question...">
+  <button id="ask">Ask</button>
+  <div id="answer"></div>
+	<script src="popup.js"></script>
+</body>
+</html>
